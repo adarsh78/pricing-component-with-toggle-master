@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*, *::before,
+*::after {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+body {
+    background-color: hsl(240, 80%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: hsl(233, 13%, 49%);
+    font-size: 2.2rem;
+    margin: 3rem 0 2rem 0;
+    text-align: center;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    color: hsl(234, 14%, 74%);
+    margin-bottom: 4rem;
+}
+
+input {
+    appearance: none;
+    width: 3.5rem;
+    height: 2rem;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 30px;
+    position: relative;
+}
+
+input:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+input::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: 0.3s linear;
+}
+
+input:checked::before {
+    left: 28px;
+}
+
+.container .card{
+    width: 275px;
+    background-color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    color:  hsl(233, 13%, 49%);
+    box-shadow: 0px 1px 10px 0px rgba(163,168,240,1);
+}
+
+.container .card:nth-child(2) {
+    background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.container .card:nth-child(2) p:nth-child(2), .container .card:nth-child(2) span {
+    color: white;
+}
+
+.container .card p:nth-child(1) {
+    font-size: 1.2rem;
+}
+
+.container .card p:nth-child(2) {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color:  hsl(232, 13%, 33%);
+}
+
+span {
+    font-size: 4rem;
+    color:  hsl(232, 13%, 33%);
+}
+
+hr {
+    outline: 0;
+    border: 0.5px solid hsl(234, 14%, 74%);
+    margin: 1.2rem 0;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    height: 3rem;
+    border-radius: 5px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:nth-child(2) button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+button:hover {
+    background: transparent;
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.container .card:nth-child(2) button:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+@media screen and (min-width: 480px) {
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .pricing {
+        font-size: 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        gap: 21.7rem;
+    }
+    .container .card {
+        width: 300px;
+    }
+
+    .container .card:nth-child(2){
+        position: absolute;
+        left: 347px;
+        bottom: -18px;
+        height: 470px;
+    }
+
+    .container .card:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .container .card:nth-child(3) {
+        border-radius: 0px 10px 10px 0;
+    }
+
+  }
